@@ -13,7 +13,7 @@ import sys
 class UdpResourceMonitorRecv:
     def __init__(self):
         self.os_detect = platform.system()
-        self.serverip = '127.0.0.1' if len(sys.argv) is not 2 else sys.argv[1]
+        self.serverip = '0.0.0.0' if len(sys.argv) is not 2 else sys.argv[1]
         self.serverport = '8080' if len(sys.argv) is not 3 else sys.argv[2]
 
     def receive(self):

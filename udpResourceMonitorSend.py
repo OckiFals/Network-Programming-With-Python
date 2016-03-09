@@ -41,7 +41,7 @@ class UdpResourceMonitorSend:
 
     def getresource(self):
         executor = self.getresourceexecutor()
-        return " %s\n \t Captured: @%s\n \t CPU Status: \n \t %s \n \t Memory Status: \n %s" % (
+        return " %s\n \t Captured: @%s\n \t CPU Status: \n \t    %s \t Memory Status: \n %s" % (
             executor['message'],
             time.strftime("%H:%M:%S", time.localtime()),
             os.popen(executor['executor']['cpu']).read(),
